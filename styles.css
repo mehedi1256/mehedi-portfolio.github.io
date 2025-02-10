@@ -186,6 +186,34 @@ section h2 {
     margin: 0 auto;
 }
 
+.contact-info {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.contact-item i {
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+.contact-item a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #007bff;
+}
+
 #contact-form {
     display: flex;
     flex-direction: column;
