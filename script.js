@@ -1,25 +1,46 @@
 // Project data
 const projects = [
     {
-        title: "E-commerce Platform",
-        description: "A full-stack e-commerce platform built with React and Node.js",
-        image: "https://source.unsplash.com/random/800x600/?ecommerce",
-        technologies: ["React", "Node.js", "MongoDB", "Express"],
-        link: "#"
+        title: "SOF Portal",
+        description: "A comprehensive education management system built with Laravel",
+        image: "assets/images/sof-portal.png",
+        technologies: ["Laravel", "PHP", "MySQL", "Bootstrap"],
+        link: "https://portal.sof.edu.bd/"
     },
     {
-        title: "Task Management App",
-        description: "A productivity app for managing daily tasks and projects",
-        image: "https://source.unsplash.com/random/800x600/?productivity",
-        technologies: ["Vue.js", "Firebase", "CSS3"],
-        link: "#"
+        title: "ClassTune LMS",
+        description: "Learning Management System for educational institutions",
+        image: "assets/images/classtune-lms.png",
+        technologies: ["Laravel", "PHP", "MySQL", "JavaScript"],
+        link: "https://bd.classtune.com/login"
     },
     {
-        title: "Weather Dashboard",
-        description: "Real-time weather application using weather API",
-        image: "https://source.unsplash.com/random/800x600/?weather",
-        technologies: ["JavaScript", "API", "Bootstrap"],
-        link: "#"
+        title: "SOF Website",
+        description: "Official website for School of Fiqh built with CodeIgniter",
+        image: "assets/images/sof-website.png",
+        technologies: ["CodeIgniter", "PHP", "MySQL", "jQuery"],
+        link: "https://sof.edu.bd/"
+    },
+    {
+        title: "ClassTune Payroll",
+        description: "Payroll management system for educational institutions",
+        image: "assets/images/classtune-payroll.png",
+        technologies: ["CodeIgniter", "PHP", "MySQL", "JavaScript"],
+        link: "https://payroll.classtune.com/"
+    },
+    {
+        title: "NDCBDE Army Portal",
+        description: "Specialized portal for Bangladesh Army",
+        image: "assets/images/ndcbde-army.png",
+        technologies: ["CodeIgniter", "PHP", "MySQL", "Bootstrap"],
+        link: "https://ndcbde4.org/main/login"
+    },
+    {
+        title: "ClassPay",
+        description: "Digital payment solution for educational institutions",
+        image: "assets/images/classpay.png",
+        technologies: ["CodeIgniter", "PHP", "MySQL", "Payment Gateway"],
+        link: "https://classpay.com.bd/"
     }
 ];
 

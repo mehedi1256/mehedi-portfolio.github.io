@@ -113,6 +113,63 @@ section h2 {
     font-size: 2.5rem;
 }
 
+/* Experience Section */
+.experience-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.experience-item {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.experience-header h3 {
+    color: #007bff;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.company-info h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.company-info .location {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
 /* About Section */
 .about-content {
     max-width: 800px;
@@ -123,7 +180,7 @@ section h2 {
 /* Projects Section */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -135,6 +192,9 @@ section h2 {
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -149,6 +209,49 @@ section h2 {
 
 .project-info {
     padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h3 {
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.project-info p {
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-technologies span {
+    background-color: #e9ecef;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.project-info a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.project-info a:hover {
+    background-color: #0056b3;
 }
 
 /* Skills Section */
