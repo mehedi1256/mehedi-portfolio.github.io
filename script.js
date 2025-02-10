@@ -16,7 +16,7 @@ const projects = [
     },
     {
         title: "SOF Website",
-        description: "Official website for School of Fiqh built with CodeIgniter",
+        description: "Official website for School of Future built with CodeIgniter",
         image: "assets/images/sof-website.png",
         technologies: ["CodeIgniter", "PHP", "MySQL", "jQuery"],
         link: "https://sof.edu.bd/"
@@ -29,7 +29,7 @@ const projects = [
         link: "https://payroll.classtune.com/"
     },
     {
-        title: "NDCBDE Army Portal",
+        title: "NDC Army Portal",
         description: "Specialized portal for Bangladesh Army",
         image: "assets/images/ndcbde-army.png",
         technologies: ["CodeIgniter", "PHP", "MySQL", "Bootstrap"],
@@ -44,11 +44,81 @@ const projects = [
     }
 ];
 
+// WordPress Project data
+const wordpressProjects = [
+    {
+        title: "SAGC",
+        description: "Savar Army Golf Club Website",
+        image: "assets/images/sagc.png",
+        technologies: ["WordPress", "PHP", "MySQL", "Custom Theme"],
+        link: "https://sagc.edu.bd"
+    },
+    {
+        title: "NASCD",
+        description: "National Army School College Dhaka",
+        image: "assets/images/nascd.png",
+        technologies: ["WordPress", "PHP", "MySQL", "Custom Theme"],
+        link: "https://nascd.edu.bd"
+    },
+    {
+        title: "BNDEWHS",
+        description: "BN DEW High School Website",
+        image: "assets/images/bndewhs.png",
+        technologies: ["WordPress", "PHP", "MySQL", "Custom Theme"],
+        link: "https://bndewhs.edu.bd"
+    },
+    {
+        title: "ESS",
+        description: "English Speaking School",
+        image: "assets/images/ess.png",
+        technologies: ["WordPress", "PHP", "MySQL", "Custom Theme"],
+        link: "https://ess.edu.bd"
+    },
+    {
+        title: "Green Gems",
+        description: "Green Gems School Website",
+        image: "assets/images/greengems.png",
+        technologies: ["WordPress", "PHP", "MySQL", "Custom Theme"],
+        link: "https://greengems.edu.bd"
+    },
+    {
+        title: "BAGHC",
+        description: "Bangladesh Army Golf Club Hostel",
+        image: "assets/images/baghc.png",
+        technologies: ["WordPress", "PHP", "MySQL", "Custom Theme"],
+        link: "https://baghc.edu.bd"
+    }
+];
+
 // Populate projects
 function populateProjects() {
     const projectGrid = document.querySelector('.project-grid');
     
     projects.forEach(project => {
+        const projectCard = document.createElement('div');
+        projectCard.className = 'project-card';
+        
+        projectCard.innerHTML = `
+            <img src="${project.image}" alt="${project.title}">
+            <div class="project-info">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <div class="project-technologies">
+                    ${project.technologies.map(tech => `<span>${tech}</span>`).join(' ')}
+                </div>
+                <a href="${project.link}" target="_blank">View Project</a>
+            </div>
+        `;
+        
+        projectGrid.appendChild(projectCard);
+    });
+}
+
+// Function to populate WordPress projects
+function populateWordPressProjects() {
+    const projectGrid = document.querySelector('.wordpress-project-grid');
+    
+    wordpressProjects.forEach(project => {
         const projectCard = document.createElement('div');
         projectCard.className = 'project-card';
         
@@ -105,6 +175,7 @@ function setupContactForm() {
 // Initialize all functions when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     populateProjects();
+    populateWordPressProjects();
     setupMobileNav();
     setupSmoothScroll();
     setupContactForm();
